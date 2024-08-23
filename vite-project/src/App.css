@@ -1,0 +1,231 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,500;0,700;0,900;1,100;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 66.5%;
+}
+
+body{
+  background: rgb(3,0,31);
+  color: white;
+}
+
+
+.App{
+  min-height: 100vh;
+  display: flex;
+  font-family: "Montserrat", sans-serif;  
+   font-weight: 400;
+}
+
+.sidebar{
+  flex:3;
+  border-right: 1px solid rgb(100,100,100);
+  overflow: hidden;
+  max-width: 100vh;
+}
+
+.main{
+  flex: 9;
+}
+.logo{
+  margin-right: 1rem;
+}
+
+.brand{
+  font-size: 2rem;
+}
+
+
+.upperside{
+  padding: 2.5rem;
+border-bottom: 1px solid rgb(100,100,100);
+height: 70%;
+}
+
+.uppersidetop{
+  display:flex;
+  align-items:center;
+  margin:2.5rem;
+}
+
+.midbtn{
+  background-color: #5A4BFF;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  width: 25rem;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  margin-bottom: 3rem;
+  border-radius: 0.5rem;
+}
+
+.query{
+  display: flex;
+  align-items: center;
+  background: transparent;
+  padding: 1.5rem;
+  color: rgba(222,222,222,1);
+  width: 25rem;
+  justify-content: center;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(98,98,98,1);
+  font-size: 1.8rem;
+}
+
+
+.query>img{
+  margin-right: 2rem;
+  object-fit: cover;
+  height: 25px;
+}
+
+.addbtn{
+  height: 2rem;
+  padding-right: 16px;
+}
+
+.lowerside{
+  padding: 2rem;
+}
+
+.listItems{
+  margin: 0.75rem;
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+}
+
+.listitemImages{
+    margin: 1rem;
+    padding-right: 16px;
+}
+
+.listitem:nth(1)>.listItemsImg{
+  margin-right: 0.5rem;
+}
+
+.listitem:nth(3)>.listItemsImg{
+  margin-right: 0.75rem;
+}
+
+
+.main {
+  min-height: calc(100vh - 10rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 6rem 10rem;
+  font-size: 2rem;
+  margin-bottom: 0;
+}
+
+.chatfooter {
+  margin-top: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.chatfooter > p {
+  margin: 2rem 0;
+}
+
+.inp {
+  padding: 0.5rem;
+  background: rgba(28, 30, 58, 1);
+  display: flex;
+  height: 6rem;
+  align-items: center;
+  width: 100%;
+  font-size: 3rem;
+  border-radius: 1rem;
+}
+
+.inp > input {
+  width: calc(100% - 3rem);
+  outline: none;
+  padding: 0.5rem;
+
+  font-size: 3rem;
+  color: white;
+}
+
+.inp > input,
+.send {
+  background: transparent;
+  border: none;
+}
+
+.chats {
+  flex-grow: 1; /* Take up the remaining space */
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding: 1rem; /* Add some padding to avoid content sticking to edges */
+  width: 100%;
+  max-width: 100rem; /* Increase max width */
+  scrollbar-width: none; /* Firefox */
+}
+
+.chats::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.chat {
+  margin: 1rem;
+  padding: 2rem;
+  font-size: 20px;
+  display: flex;
+  align-items: flex-start;
+  text-align: justify;
+  width: 100%; /* Ensure the chat container takes full width */
+  box-sizing: border-box; /* Consider padding and border values */
+}
+
+.chatimgs {
+  object-fit: cover;
+  width: 3.5rem;
+  margin-right: 2rem;
+  border-radius: 0.5rem;
+}
+
+.bot {
+  background: rgba(28, 30, 58, 1);
+  width: 100%; 
+  box-sizing: border-box; 
+}
+
+
+/* Media queries for mobile responsiveness */
+@media (max-width: 768px) {
+  .sidebar {
+    display: none; /* Hide the sidebar on mobile devices */
+  }
+
+  .main {
+    width: 100%; /* Make the main chat section take full width */
+  }
+
+  .chats {
+    max-width: 100%; /* Ensure chat section takes full width */
+  }
+
+  .inp {
+    width: 100%; /* Ensure input section takes full width */
+  }
+
+}
+
+
